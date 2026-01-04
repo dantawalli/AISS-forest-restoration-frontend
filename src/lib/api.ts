@@ -1,6 +1,6 @@
 // API configuration
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL ?? 'http://98.86.169.128';
+  import.meta.env.VITE_API_URL ?? 'https://www.buharinasirahmad.best';
 
 /* =======================
    Interfaces (Backend-aligned)
