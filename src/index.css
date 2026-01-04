@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Forest Watch Dashboard - Nature-inspired Design System */
+
+@layer base {
+  :root {
+    --background: 120 20% 98%;
+    --foreground: 150 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 10%;
+
+    --primary: 142 50% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 60% 92%;
+    --secondary-foreground: 35 50% 25%;
+
+    --muted: 120 15% 94%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 35 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 142 50% 35%;
+
+    --radius: 0.75rem;
+
+    /* Chart colors - nature inspired */
+    --chart-forest: 142 50% 35%;
+    --chart-emerald: 152 60% 45%;
+    --chart-amber: 35 90% 55%;
+    --chart-terracotta: 15 70% 55%;
+    --chart-ocean: 200 70% 50%;
+    --chart-sage: 120 25% 65%;
+
+    /* Gradients */
+    --gradient-forest: linear-gradient(135deg, hsl(142 50% 35%), hsl(152 60% 45%));
+    --gradient-sunset: linear-gradient(135deg, hsl(35 90% 55%), hsl(15 70% 55%));
+    --gradient-ocean: linear-gradient(135deg, hsl(200 70% 50%), hsl(180 60% 45%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(150 20% 20% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(150 20% 20% / 0.12);
+    --shadow-glow: 0 0 40px hsl(142 50% 35% / 0.15);
+
+    --sidebar-background: 120 20% 97%;
+    --sidebar-foreground: 150 30% 10%;
+    --sidebar-primary: 142 50% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 15% 94%;
+    --sidebar-accent-foreground: 150 30% 10%;
+    --sidebar-border: 120 15% 88%;
+    --sidebar-ring: 142 50% 35%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 120 15% 95%;
+
+    --card: 150 20% 12%;
+    --card-foreground: 120 15% 95%;
+
+    --popover: 150 20% 12%;
+    --popover-foreground: 120 15% 95%;
+
+    --primary: 142 50% 45%;
+    --primary-foreground: 150 30% 10%;
+
+    --secondary: 150 15% 18%;
+    --secondary-foreground: 120 15% 90%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 120 10% 60%;
+
+    --accent: 35 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 142 50% 45%;
+
+    --sidebar-background: 150 20% 10%;
+    --sidebar-foreground: 120 15% 95%;
+    --sidebar-primary: 142 50% 45%;
+    --sidebar-primary-foreground: 150 30% 10%;
+    --sidebar-accent: 150 15% 18%;
+    --sidebar-accent-foreground: 120 15% 95%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 142 50% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-[var(--shadow-card)];
+  }
+
+  .gradient-forest {
+    background: var(--gradient-forest);
+  }
+
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+
+  .gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}

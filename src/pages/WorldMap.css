@@ -1,0 +1,118 @@
+/* World Map Styles */
+
+/* Smooth transitions for map countries */
+.geography-transition {
+  transition: fill 0.3s ease-in-out !important;
+}
+
+/* Map container with smooth opacity transitions */
+.map-container {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.map-container.transitioning {
+  opacity: 0.7;
+}
+
+/* Smooth year indicator animation */
+.year-indicator {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Animation status indicator */
+.animation-status {
+  transition: all 0.2s ease-in-out;
+}
+
+.animation-status.playing {
+  color: hsl(var(--primary));
+  transform: scale(1.05);
+}
+
+/* Smooth hover effects */
+.country-hover {
+  transition: fill 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* Loading states with smooth transitions */
+.loading-overlay {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Smooth fade-in for tooltips */
+.tooltip-fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth color transitions for different data modes */
+.color-transition {
+  transition: fill 0.4s ease-in-out;
+}
+
+/* Animation controls with smooth feedback */
+.control-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.control-button:hover {
+  transform: scale(1.05);
+}
+
+.control-button:active {
+  transform: scale(0.95);
+}
+
+/* Smooth slider transitions */
+.slider-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Map legend with smooth transitions */
+.legend-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.legend-item:hover {
+  transform: translateX(2px);
+}
+
+/* Smooth zoom transitions */
+.zoom-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Performance optimization for smooth animations */
+.geography-path {
+  will-change: fill;
+  transform: translateZ(0);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .geography-transition,
+  .map-container,
+  .year-indicator,
+  .animation-status,
+  .country-hover,
+  .loading-overlay,
+  .tooltip-fade-in,
+  .color-transition,
+  .control-button,
+  .slider-transition,
+  .legend-item,
+  .zoom-transition {
+    transition: none !important;
+    animation: none !important;
+  }
+}
