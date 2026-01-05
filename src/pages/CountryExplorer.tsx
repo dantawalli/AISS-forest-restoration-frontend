@@ -266,7 +266,7 @@ export default function CountryExplorer() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {displayTrend.reverse().map((row, index) => {
+              {displayTrend.map((row, index) => {
                 const yearData = displayEmissions.find(e => e.year === row.year);
                 const primaryDriver = displayDrivers.find(d => d.name === (drivers?.find(dr => dr.hectares === Math.max(...drivers.map(dr => dr.hectares)))?.driver || ''))?.name || '';
                 return (
